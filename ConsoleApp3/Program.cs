@@ -56,6 +56,37 @@ namespace ConsoleApp3
 
             WriteLine($"probely {count}");
             #endregion
+
+            #region Task 2
+            string sTicketNumber;
+            int nTicketNumber;
+            bool isTicketNumberValid = false;
+            do
+            {
+                sTicketNumber = ReadLine();
+                if (sTicketNumber.Length == 6&&int.TryParse(sTicketNumber, out nTicketNumber))
+                {
+                    isTicketNumberValid = true;
+                }
+            } while (!isTicketNumberValid);
+            int leftPart = 0, rightPart = 0;
+            for (int i = 0; i < sTicketNumber.Length; ++i)
+            {
+                if (i<3)
+                {
+                    leftPart += int.Parse(sTicketNumber[i].ToString());
+                }
+                else
+                {
+                    rightPart += int.Parse(sTicketNumber[i].ToString());
+                }
+            }
+            bool isLucky = leftPart == rightPart;
+            WriteLine(isLucky ? "+" : "-");
+
+
+
+            #endregion
         }
         //static int  Sum(int a,int b,int c=0)
         // {
