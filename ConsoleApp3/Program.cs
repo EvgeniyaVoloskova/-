@@ -41,7 +41,8 @@ namespace ConsoleApp3
             WriteLine(Sum(2, 3));
             WriteLine(Sum(2, 3,4));
             WriteLine(Sum(2, 3,2,45,58,4,6));
-           ConsoleKeyInfo symbol;
+            #region Task 1
+            ConsoleKeyInfo symbol;
             int count = 0;
             do
             {
@@ -54,6 +55,7 @@ namespace ConsoleApp3
             } while (symbol.KeyChar != '.');
 
             WriteLine($"probely {count}");
+            #endregion
         }
         //static int  Sum(int a,int b,int c=0)
         // {
