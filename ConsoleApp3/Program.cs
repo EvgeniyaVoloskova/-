@@ -56,6 +56,9 @@ namespace ConsoleApp3
 
             WriteLine($"probely {count}");
             #endregion
+            #region Task 3
+
+            #endregion
         }
         //static int  Sum(int a,int b,int c=0)
         // {
